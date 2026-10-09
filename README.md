@@ -123,16 +123,16 @@ Vérifié le 8 octobre 2026 sous Windows 11, avec le JDK 24.0.1 et Maven 3.9.16 
 - démonstration console exécutée jusqu’à « TOUS LES SCÉNARIOS TERMINÉS AVEC SUCCÈS » ;
 - interface lancée depuis le JAR et parcourue sur l’écran réel avec l’exemple ci-dessus : montées, refus « Bus plein », arrêts 1 à 3, descentes et réinitialisation. Les compteurs et le journal correspondent à chaque étape.
 
-## Contexte et présentation
+## Compatibilité et outillage
 
-Projet pédagogique réalisé **en équipe de trois**, présenté dans le portfolio d’**Alae Ddine AFRAKLA**. Ce dépôt reprend la dernière partie du projet de cours, qui est la version complète, plutôt que les étapes intermédiaires.
+- Compilation ciblant Java 17 ; fonctionne avec les JDK 17 et suivants (vérifié avec le JDK 24 en local, et avec Java 17 et 21 en intégration continue).
+- Maven Wrapper (`mvnw`, `mvnw.cmd`) : aucune installation de Maven n’est nécessaire.
+- Outils de test à jour pour les JDK récents : JUnit 4.13.2, Mockito 5.24.0, JaCoCo 0.8.15.
+- JAR exécutable : `java -jar` lance directement l’interface Swing.
+- Boutons Swing : le texte blanc des boutons « Créer Bus » et « Ajouter Passager », illisible avec l’apparence Windows, a été retiré.
 
-La répartition des contributions individuelles n’est pas documentée dans l’archive reçue. La présence du projet sur un compte personnel ne signifie pas que son propriétaire en est l’unique auteur.
+Aucune licence n’est jointe à ce dépôt.
 
-Différences avec la version rendue en cours :
-- POM aligné sur Java 17, avec un JAR exécutable ;
-- versions des outils de test mises à jour pour les JDK récents (Mockito 5.24.0, JaCoCo 0.8.15, plugins Maven) ;
-- ajout du Maven Wrapper ;
-- dans l’interface, le texte blanc des deux boutons, illisible sous Windows, a été retiré.
+## Auteur
 
-Aucune licence de redistribution n’est ajoutée : ce dépôt ne modifie pas les droits des auteurs ou des éventuels supports pédagogiques.
+Développé par Alae Ddine AFRAKLA.
