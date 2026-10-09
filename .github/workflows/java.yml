@@ -1,0 +1,28 @@
+name: Java verification
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Compilation, tests et couverture (Java ${{ matrix.java }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        java: ['17', '21']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java }}
+          cache: maven
+      - name: Tests et couverture (Maven Wrapper)
+        run: ./mvnw --batch-mode --no-transfer-progress clean verify
+      - name: Démonstration console
+        run: java -cp target/classes simple.SimpleEtendu

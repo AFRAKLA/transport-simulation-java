@@ -1,0 +1,27 @@
+# Construction
+target/
+bin/
+out/
+*.class
+*.jar
+!.mvn/wrapper/*.jar
+
+# Maven Wrapper : la distribution est téléchargée, pas versionnée
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE et système
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Journaux et sauvegardes
+*.log
+*.tmp
+*.bak
+*.tar.gz
+*.zip
